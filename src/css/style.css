@@ -54,10 +54,20 @@
 }
 
 .header_social{
+   display: flex;
+   align-items:center;
    
 }
 .header_social_item{
-    
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: #ffffff;
+}
+.header_social_item i{
+    margin: 9px 9px 9px;
+    color:hsl(209, 100%, 42%)
 }
 
 .promo_descr {
