@@ -7,6 +7,11 @@
     justify-content: space-between;
     padding:10px 0 10px 0;
 }
+.block_header {
+   width:100%;
+   display: flex;
+   flex-direction: row;
+}
 .button_ticket {
     color:#000000;
     font-size: 15px;
@@ -18,6 +23,7 @@
     width: 140px;
     height: 35px;
     cursor: pointer;
+    margin-right: 35px;
 }
 .button-slanted{
     transform: skewX(-35deg);
@@ -64,10 +70,21 @@
     margin-right: 10px;
     border-radius: 100%;
     background-color: #ffffff;
+    transition: .5s all;
+}
+.header_social_item:hover{
+    background-color: #FBE900;
+
+}
+.header_social_item i:hover{
+    background-color: ;
+    
 }
 .header_social_item i{
-    margin: 9px 9px 9px;
-    color:hsl(209, 100%, 42%)
+    display: flex;
+    margin-top: 8px;
+    justify-content: center;
+    color:hsl(209, 100%, 42%);
 }
 
 .promo_descr {
@@ -169,4 +186,14 @@ nav {
     color:#ffffff;
     font-size: 32px;
     font-weight: 700;
+}
+
+.news {
+    min-height: 400px;
+}
+.news_wrapper {
+    margin: 0 auto;
+}
+.news_content {
+    width:50%;
 }
