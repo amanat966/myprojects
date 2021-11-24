@@ -208,8 +208,7 @@ nav {
     font-weight: 700;
     text-transform: uppercase;
 }
-.main_news{
-}
+
 .main_news_items{
     display: flex;
     flex-direction: row;
@@ -267,4 +266,103 @@ nav {
     box-shadow:2px 2px 5px #FBE900;
     color:#ffffff;
     border:none;
+}
+.table {
+    width: 400px;
+}
+.table_content{
+    display: flex;
+    flex-direction: column;
+}
+.table_wrapper{
+    display: flex;
+    height: 35px;
+    background-color:hsl(209, 85%, 42%);
+    justify-content: space-around;
+}
+.premier_block{
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color:hsl(209, 100%, 42%);
+    width: 50%;
+    height: auto;
+    cursor: pointer;
+}
+.premier_block div:before{
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color:hsl(209, 100%, 42%);
+    width: 50%;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.premier_block:hover{
+    background-color:#FBE900;
+    
+}
+.premier_block:hover::before{
+    transform: translateX(0) skewX(-45deg);
+    
+}
+.premier_descr{
+    margin-top: 8px;
+    color:#ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+ }
+.premier_descr:hover{
+    color:#000000;
+}
+
+.first_league_block{
+    display: flex;
+    justify-content: center;
+    border: none;
+    height: auto;
+    width: 50%;
+    cursor: pointer;
+ }
+ .first_league_block:active{
+     background-color:#FBE900;
+ }
+.first_league_descr{
+    margin-top: 8px;
+    color:#ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.first_league_descr:active{
+    color:#000000;
+}
+.table_content_name {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+thead {
+    height: 50px;
+    background-color: #021033;
+}
+th {
+    color:#ffffff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 7px 18px;
+}
+td {
+    text-align: center;
+    height: 40px;
+}
+.table_variative {
+    background-color: #d4e0fd;
+}
+.caspiy {
+    background-color: #FBE900;
 }
