@@ -203,7 +203,7 @@ nav {
     align-items:flex-start;
     width:auto;
 }
-.content_descr{
+.wrapper_content_name{
     font-size: 28px;
     font-weight: 700;
     text-transform: uppercase;
@@ -339,11 +339,6 @@ nav {
 .first_league_descr:active{
     color:#000000;
 }
-.table_content_name {
-    font-size: 28px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
 
 thead {
     height: 50px;
@@ -358,6 +353,7 @@ th {
 }
 td {
     text-align: center;
+    font-weight: 400;
     height: 40px;
 }
 .table_variative {
@@ -365,4 +361,139 @@ td {
 }
 .caspiy {
     background-color: #FBE900;
+}
+
+.matches {
+    height: 300px;
+    margin-top: 60px;
+}
+.matches .wrapper_content_name{
+    text-align: center;
+}
+.content_matches {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.block_matches {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background: url(../assets/block_matches.png) center center/cover no-repeat;
+    width: 350px;
+    height: 200px;
+}
+.descr_matches{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.descr_matches .team {
+    margin-top: 10px;
+}
+.descr_matches .score_match {
+    font-size: 40px;
+    color:white;
+    margin: 0 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.stadion_matches{
+    text-align: center;
+    line-height: 15px;
+    margin-top: 20px;
+}
+.stadion_matches .stadion_city{
+    color:white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.stadion_matches .stadion_name{
+    color:white;
+    font-weight: 700;
+}
+
+.sponsors {
+    height: 700px;
+    margin-top: 80px;
+}
+.sponsor_name {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 500px;
+}
+.sponsor_name a {
+    transition: transform 0.3s;
+}
+.sponsor_name a:hover {
+    transform: scale(1.2);
+}
+.sponsor{
+    width: 350px;
+    height: 250px;
+}
+
+footer {
+    background-color:hsl(209, 100%, 42%);
+    height: 300px;
+}
+.footer_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 70px;
+}
+.footer_contacts {
+    display: flex;
+    flex-direction: row;
+}
+.footer_content .footer_contacts .wrapper_content_name{
+    color:white;
+    font-weight: 600;
+}
+.footer_content .footer_contacts .footer_contacts_more {
+    color:white;
+}
+.developer {
+    padding-top: 50px;
+    text-align: center;
+    color:white;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    list-style-type: none;
+}
+.developer:hover {
+    color:#021033;
+    text-decoration: none;
+}
+
+.footer_social{
+    display: flex;
+    padding-top: 20px;
+    
+ }
+ .footer_social_item{
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    transition: .5s all;
+ }
+ 
+ .footer_social_item i{
+    display: flex;
+    font-size: 35px;
+    margin-top: 15px;
+    justify-content: center;
+    color:hsl(209, 100%, 42%);
+ }
+
+ .footer_social_item i:hover{
+    color: #021033;  
+    text-decoration: none;
 }
