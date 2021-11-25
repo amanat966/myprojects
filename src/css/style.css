@@ -72,12 +72,9 @@
     background-color: #ffffff;
     transition: .5s all;
 }
-.header_social_item:hover{
-    background-color: #FBE900;
 
-}
 .header_social_item i:hover{
-    background-color: #ffffff;
+    color: #021033;
     
 }
 .header_social_item i{
@@ -86,7 +83,6 @@
     justify-content: center;
     color:hsl(209, 100%, 42%);
 }
-
 .promo_descr {
     display: flex;
     margin-top: 10px;
@@ -113,7 +109,7 @@
 }
 nav {
     width:100%;
-    background-color:hsl(209, 85%, 42%);
+    background-color:#2186df;
     margin-top: 40px;
 }
 .menu {
@@ -123,8 +119,11 @@ nav {
     justify-content: space-around;
     margin-bottom:0px;
 }
+.menu li {
+    border-right: 1px solid #0070d9;
+}
 .menu .menu_item {
-    width:150px;
+    width:160px;
     height: 80px;
     text-align: center;
     padding-top: 30px;
@@ -137,6 +136,18 @@ nav {
     font-weight: 600;
     transition-property: all;
     transition-duration: 0.5s;
+}
+.menu_item ul li{
+    display: none;
+    height: auto;
+    margin-left: -11px;
+    padding: 0;
+}
+.menu_item:hover ul li{
+    display: block;
+    height: auto;
+    margin-left: -11px;
+    padding: 0;
 }
 .menu .menu_link:hover{
     color:#000000;
@@ -484,7 +495,9 @@ footer {
     background-color: #ffffff;
     transition: .5s all;
  }
- 
+ .footer_social_item a:hover{
+     text-decoration: underline;
+ }
  .footer_social_item i{
     display: flex;
     font-size: 35px;
@@ -495,5 +508,4 @@ footer {
 
  .footer_social_item i:hover{
     color: #021033;  
-    text-decoration: none;
 }
