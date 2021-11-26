@@ -139,15 +139,23 @@ nav {
 }
 .menu_item ul li{
     display: none;
-    height: auto;
-    margin-left: -11px;
-    padding: 0;
 }
 .menu_item:hover ul li{
-    display: block;
-    height: auto;
-    margin-left: -11px;
-    padding: 0;
+    height: 50px;
+    background: #2186df;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: -40px;
+    border-top: 1px solid #0070d9;
+    border-right:none;
+}
+.menu li ul{
+    margin-top: 25px;
+}
+.menu li ul li:hover{
+    background-color: #FBE900;
 }
 .menu .menu_link:hover{
     color:#000000;
@@ -468,14 +476,20 @@ footer {
 .footer_content .footer_contacts .footer_contacts_more {
     color:white;
 }
+.footer_developer_block {
+    display: flex;
+    align-items:center;
+    height: 100px;
+}
 .developer {
-    padding-top: 50px;
-    text-align: center;
+    display: flex;
+    align-items:center;
     color:white;
     font-weight: 400;
     font-size: 18px;
     text-transform: uppercase;
     list-style-type: none;
+    max-height: 30px;
 }
 .developer:hover {
     color:#021033;
@@ -508,4 +522,45 @@ footer {
 
  .footer_social_item i:hover{
     color: #021033;  
+}
+
+.team {
+    height: auto;
+    margin-top: 50px;
+}
+.main_team {
+    display: flex;
+    flex-direction: column;
+}
+.main_team .team_goalkeeper {
+    display: flex;
+    flex-direction: column;
+}
+.main_team .team_goalkeeper .team_goalkeeper_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.team_goalkeeper .team_goalkeeper_block .team_content_block {
+    background: url(../assets/player.png) center center/cover no-repeat;
+}
+.team_content_block .team_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 320px;
+    height: 400px;
+}
+.team_content .content_number {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    border-top: 30px solid #0070d9;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+}
+.content_number .content_number_style {
+    color:#000000;
+    font-size: 18px;
+    font-weight: 700;
 }
