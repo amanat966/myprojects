@@ -113,6 +113,8 @@ nav {
     margin-top: 40px;
 }
 .menu {
+    position: relative;
+    z-index: 1;
     display: flex;
     list-style-type: none;
     padding-inline-start: 0;
@@ -435,22 +437,30 @@ td {
 }
 
 .sponsors {
-    height: 700px;
-    margin-top: 80px;
+    display: flex;
+    align-items:center;
 }
 .sponsor_name {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 500px;
+}
+a.sponsor img {
+    width:160px;
+    height:80px;
 }
 .sponsor_name a {
-    transition: transform 0.3s;
+    transition: 0.3s;
+    filter: grayscale(1);
 }
 .sponsor_name a:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    filter: grayscale(0);
 }
 .sponsor{
+    display: flex;
+    align-items:center;
+    justify-content: center;
     width: 350px;
     height: 250px;
 }
@@ -528,6 +538,9 @@ footer {
     height: auto;
     margin-top: 50px;
 }
+.team .wrapper_content_name {
+    font-size: 38px;
+}
 .main_team {
     display: flex;
     flex-direction: column;
@@ -536,31 +549,346 @@ footer {
     display: flex;
     flex-direction: column;
 }
+.main_team .team_defend {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.main_team .team_attacker {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
 .main_team .team_goalkeeper .team_goalkeeper_block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.team_goalkeeper .team_goalkeeper_block .team_content_block {
-    background: url(../assets/player.png) center center/cover no-repeat;
+.main_team .team_defend .team_defend_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.team_content_block .team_content {
+.main_team .team_attacker .team_attacker_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.team_content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 320px;
+}
+.team_descr {
+    margin-top: 30px;
+    font-size: 36px;
+    font-weight: 600;
+}
+.player_content {
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+.player_content:hover {
+    transform: scale(0.93);
+}
+.content_number_block {
+    position: absolute;
+    width: 75px;
+    border-top: 50px solid rgb(0, 111, 216, 85%);
+    border-left: 0px solid transparent;
+    border-right: 40px solid transparent;
+    text-align: center;
+}
+.content_number_style {
+    position: absolute;
+    margin-top: -46px;
+    color:white;
+    font-weight: 700;
+    font-size: 28px;
+}
+a.player img{
+    width: 340px;
     height: 400px;
 }
-.team_content .content_number {
-    width: 60px;
-    height: 30px;
-    text-align: center;
-    border-top: 30px solid #0070d9;
-    border-left: 0px solid transparent;
-    border-right: 30px solid transparent;
+.hidden_content {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    margin-top: 10px;
 }
-.content_number .content_number_style {
+.content_name {
     color:#000000;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+.content_name:hover {
+    color:rgb(0, 111, 216, 85%);
+}
+.content_flag {
+    width: 35px;
+    height: 35px;
+}
+
+.match {
+    height: auto;
+}
+.match_wrapper {
+    margin-top: 50px;
+}
+.match_schedule {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.schedule_type {
+    display: flex;
+    flex-direction: row;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    width: 210px;
+}
+label {
+    background-color: transparent;
+    color: #000000;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+#form_select_option{
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    outline: 0;
+}
+option {
+    background-color: transparent;
+    color: #03f;
+}
+
+.match_wrapper h3.wrapper_content_name {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.match_wrapper .content_matches {
+    margin-top: 15px;
+}
+.match_wrapper .content_matches:last-child {
+    margin-bottom: 80px;
+}
+.match_wrapper .content_matches .block_matches {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(2, 16, 51, 90%);
+    opacity: 0.89;
+    width: 550px;
+    height: 300px;
+}
+.match_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    background-color: #ffffff;
+    width: 550px;
+    border: 2px solid #021033;
+    margin-top: 0px;
+}
+.match_stadion {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 20px;
+}
+.match_stadion_city {
+    color: #000000;
+}
+.match_stadion_name {
+    color: #000000;
+}
+
+.match_date {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+.match_wrapper .content_matches .block_matches .descr_matches {
+    margin-top:30px;
+}
+
+a.match_team img {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+}
+.match_team_item {
+    font-size:72px;
+    font-weight: 600;
+    margin: 30px 10px 0;
+    color: #ffffff;
+}
+.match_team_descr {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    
+}
+.match_team_name {
+    font-size: 18px;
+    color:#ffffff;
+    font-weight: 600;
+
+}
+.match_team_city {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.event {
+    margin: 50px 0;
+}
+.event h2.wrapper_content_name{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.event h3.wrapper_content_name{
+    font-size: 22px;
+    font-weight: 500;
+}
+.event_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.event_content {
+    display: flex;
+    flex-direction: row;
+}
+.event_content_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.event_subcontent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+a.event_subcontent_picture img {
+    width:350px;
+    height:250px;
+    border:2px solid #021033;
+} 
+.event_subcontent_main {
+    display: flex;
+    flex-direction: column;
+    width:350px;
+    align-items:center;
+}
+.event_subcontent_main h3.wrapper_content_name {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+.event_subcontent_main .event_line {
+    width:350px;
+}
+.event_subcontent_main .event_text {
+    line-height: 18px;
+    font-weight: 400;
+    margin:0;
+    font-size: 14px;
+}
+.event_subcontent_main .main_event_block {
+    width: 350px;
+    margin:20px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+}
+.event_subcontent_main .main_event_block div.button_read.button-slanted {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #FBE900;
+    border: none;
+    width: 50px;
+    height: 20px;
+    cursor: pointer;
+    margin:0;
+}
+.event_subcontent_main .main_event_block span.button-slanted-content {
+    margin-top:2px;
+    font-size: 10px;
+}
+.event_content_main {
+    display: flex;
+    flex-direction: column;
+}
+a.event_content_picture img {
+    width:600px;
+    height:400px;
+}
+.event_content_main {
+    align-items:center;
+    padding-top: 30px;
+    
+}
+.event_text {
+    line-height: 22px;
+    font-weight: 400;
+    margin: 30px 0 0 20px;
+    text-align: justify;
+}
+.main_event_block {
+    width:500px;
+    display: flex;
+    justify-content: space-around;
+    margin: 150px 0 0 20px;
+}
+.event_block_time {
+    width: 120px;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+    margin-right:100px;
+}
+.event_line {
+    width:485px;
+    text-align: center;
+    border-bottom: 1px #ececec;
+}
+.main_event_block div.button_read.button-slanted {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #FBE900;
+    border: none;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    margin:0;
+}
+.event_content_main .main_event_block .button-slanted {
+    transform: skewX(-35deg);
+    transition: .5s all;
+}
+
+.main_event_block div.button_read.button-slanted:hover{
+    box-shadow:2px 2px 5px #FBE900;
+    color:#ffffff;
+    border:none;
 }
